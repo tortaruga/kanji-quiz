@@ -1,10 +1,10 @@
 # overview
 
-A kanji quiz built with [kanjiapi.dev](kanjiapi.dev). Made as upgrade of an old [project](https://tortaruga.github.io/n5-kanji-quiz/), which only supported N5 kanji and had a depressingly ugly user interface.
+A kanji quiz built with [kanjiapi.dev](https://kanjiapi.dev/). Made as upgrade of an old [project](https://tortaruga.github.io/n5-kanji-quiz/), which only supported N5 kanji and had a depressingly ugly user interface.
 
 ### built with
 
-This project fetches the kanji lists and meanings from [kanjiapi.dev](kanjiapi.dev). I vaguely remember checking this api when I first started the old project, but as far as I remember it didn't have an endpoint for JLPT levels, only for grades, so I ended up writing the list myself (which is the reason why it only supported N5 — I like to suffer but not *that* much). 
+This project fetches the kanji lists and meanings from [kanjiapi.dev](https://kanjiapi.dev/). I vaguely remember checking this api when I first started the old project, but as far as I remember it didn't have an endpoint for JLPT levels, only for grades, so I ended up writing the list myself (which is the reason why it only supported N5 — I like to suffer but not *that* much). 
 
 The project is built with vanilla JS. I thought React's conditional rendering and states would have been useful, but in honor of my first version (which was made with vanilla js because I knew nothing else) I decided to use pure javascript again.
 
