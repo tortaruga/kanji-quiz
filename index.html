@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanji Quiz</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Gasoek+One&family=Protest+Strike&family=Rubik+Mono+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="offline-alert"></div>
+
+        <h1>kanji <span>quiz</span></h1>
+        <header class="intro active">
+          <p>Hello! Select your level and test your kanji knowledge.</p>
+            <div class="levels">
+              <button id="5" style="--bg: var(--cream); --img: var(--tanuki)">n5</button> 
+              <button id="4" style="--bg: var(--reddish); --img: var(--omamori-blue)">n4</button>  
+              <button id="3" style="--bg: var(--teal); --img: var(--daruma)">n3</button> 
+              <button id="2" style="--bg: var(--orange); --img: var(--money-cat)">n2</button>
+              <button id="1" style="--bg: var(--green); --img: var(--wu-lou)">n1</button>
+            </div>
+
+            <button id="more-info-btn"><img src="./images/info.svg" alt=""> more info</button>
+            <div class="more-info-modal">
+                <p>Kanji are Chinese characters used in Japanese writing. 
+                    The JLPT (Japanese Language Proficiency Test) is a test to evaluate 
+                    the language proficiency for non-native speakers; it consists
+                    of five levels of certification, 5 being the lowest and 1 the most
+                    advanced. There aren't official, fixed lists of kanji for each JLPT level; 
+                    this app uses the lists from <a href="https://kanjiapi.dev/" target="_blank">kanjiapi.dev</a>
+
+                </p>
+                    <button class="close-modal">got it!</button>
+            </div>
+        </header>
+        
+        <div class="loader">
+            <div class="dots">
+                <span style="--color: var(--cream); --delay: 0s"></span>
+                <span style="--color: var(--teal); --delay: .5s"></span>
+                <span style="--color: var(--green); --delay: 1s"></span>
+            </div>
+            <p class="loader-message">Get ready!</p>
+        </div>
+
+        <div class="error-message">
+            <img src="./images/error.png" alt="">
+            <p></p>
+        </div>
+
+        <div class="quiz">
+            <header>
+                <p>question <span class="question-count">1/25</span></p>
+            </header>
+            <div class="question-details">
+              <div class="kanji"></div>
+              <div class="readings">
+                <p>kun <span class="kun">kun</span></p>
+                <p>on <span class="on">on</span></p>
+              </div>
+            </div>
+            
+            <div class="answers">
+                <button class="option">option</button>
+                <button class="option">option</button>
+                <button class="option">option</button>
+                <button class="option">option</button>
+            </div>
+            <footer>
+                <span class="correct-score">0</span>
+                <span class="incorrect-score">0</span>
+            </footer>
+        </div>
+
+        <div class="results">
+            <div class="result-message">
+                <img src="./images/medal.png" alt="">
+               <h3>Congrats! You scored</h3>
+               <h1 class="score"></h1>
+               <p class="message"></p>
+            </div>
+            
+            <button class="play-again-btn">play again?</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>project made with <a href="https://kanjiapi.dev/" target="_blank">kanjiapi.dev</a>.
+        all images by <a href="https://www.freepik.com/" target="_blank">freepik</a>.
+        favicon by <a href="https://icons8.it/" target="_blank">icons8.</a></p>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+</html>
