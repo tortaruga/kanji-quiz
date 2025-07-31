@@ -11,6 +11,8 @@
     --omamori-blue: url(./images/omamori-blue.png);
 }
 
+/* general */
+
 * {
     box-sizing: border-box;
 }
@@ -34,7 +36,6 @@ button {
     color: inherit;
 }
 
-
 a {
     color: blueviolet;
     font-weight:600;
@@ -53,6 +54,7 @@ h1 {
     }
 }
 
+/* alert message */
 .offline-alert {
     background-color: #e9ecef;
     box-shadow: .4rem .3rem 10px #4950572d;
@@ -126,8 +128,6 @@ h1 {
   }
 }
 
-/* end of loader */
-
 /* error message */
 
 .error-message {
@@ -149,15 +149,12 @@ h1 {
     display: flex;
 }
 
-
-/* end of error message */
-
+/* intro */
 .intro {
     text-align: center;
     display: none;
     opacity: 0;
-    animation: removeElement .3s .5s;
-
+ 
     p {
         font-size: 1.3rem;
     }
@@ -166,16 +163,6 @@ h1 {
 .intro.active {
     display: block;
     opacity: 1;
-}
-
-@keyframes removeElement {
-    from {
-        display: block;
-    }
-
-    to {
-        display: none;
-    }
 }
 
 .levels {
@@ -202,12 +189,8 @@ h1 {
         transition: .3s;
         color: blueviolet;
         color: whitesmoke;
-        /* font-weight: bold; */
         font-family: 'anton', sans-serif;
-        /* font-family: 'protest strike'; */
-        /* font-family: 'gasoek one'; */
-        /* font-family: 'rubik mono one';  */
-
+ 
         &:nth-of-type(4) {
             background-position: 0% 5%;
         }
@@ -268,11 +251,11 @@ h1 {
 
 
 .more-info-modal.active {
-    /* display: block; */
     bottom: 0%;
     left: 0;
 }
 
+/* quiz */
 .quiz {
     display: none;
     padding: 1rem;
@@ -444,6 +427,7 @@ button.incorrect {
     }
 }
 
+/* results */
 .results {
     display: none;
     background-color: white;
@@ -502,6 +486,7 @@ footer {
 }
 
 
+/* media queries */
 @media screen and (min-width: 600px) {
     .levels {
         display: grid;
@@ -535,4 +520,12 @@ footer {
         background-position: 150% 200%, -40% -30%; 
         background-size: 60%, 50%;
     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dots span,
+  button.correct,
+  button.incorrect {
+    animation: none !important;
+  }
 }

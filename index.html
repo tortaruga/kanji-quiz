@@ -17,6 +17,7 @@
         <div class="offline-alert"></div>
 
         <h1>kanji <span>quiz</span></h1>
+        <!-- intro -->
         <header class="intro active">
           <p>Hello! Select your level and test your kanji knowledge.</p>
             <div class="levels">
@@ -27,7 +28,8 @@
               <button id="1" style="--bg: var(--green); --img: var(--wu-lou)">n1</button>
             </div>
 
-            <button id="more-info-btn"><img src="./images/info.svg" alt=""> more info</button>
+            <!-- more info modal -->
+            <button id="more-info-btn"><img aria-hidden="true" src="./images/info.svg" alt=""> more info</button>
             <div class="more-info-modal">
                 <p>Kanji are Chinese characters used in Japanese writing. 
                     The JLPT (Japanese Language Proficiency Test) is a test to evaluate 
@@ -41,6 +43,7 @@
             </div>
         </header>
         
+        <!-- loader -->
         <div class="loader">
             <div class="dots">
                 <span style="--color: var(--cream); --delay: 0s"></span>
@@ -50,11 +53,13 @@
             <p class="loader-message">Get ready!</p>
         </div>
 
+        <!-- error message -->
         <div class="error-message">
-            <img src="./images/error.png" alt="">
+            <img aria-hidden="true" src="./images/error.png" alt="">
             <p></p>
         </div>
 
+        <!-- quiz -->
         <div class="quiz">
             <header>
                 <p>question <span class="question-count">1/25</span></p>
@@ -79,9 +84,10 @@
             </footer>
         </div>
 
+        <!-- results -->
         <div class="results">
             <div class="result-message">
-                <img src="./images/medal.png" alt="">
+                <img aria-hidden="true" src="./images/medal.png" alt="">
                <h3>Congrats! You scored</h3>
                <h1 class="score"></h1>
                <p class="message"></p>
